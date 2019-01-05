@@ -49,12 +49,10 @@ function ShellSort($elements)
             $elements[$p + $step] = $temp;
         }
     }
-    return [$elements, $m, $p];
+    return [$elements, $m];
 }
 echo '<pre>',
     print_r(ShellSort($prices)[0]),
     '<br>',
     print_r(ShellSort($prices)[1]),
-    '<br>',
-    print_r(ShellSort($prices)[2]),
     '</pre>';
