@@ -40,6 +40,4 @@ function merge($arr, $minIndex, $middleIndex, $maxIndex)
     }
 }
 
-sort($arr);
-
 echo '<pre>', print_r($arr), '</pre>';
