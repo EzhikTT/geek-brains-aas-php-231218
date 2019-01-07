@@ -1,12 +1,12 @@
-<?
-$arr = [300, 1000, 1, 54, 1, 23, 1, 1000, 3000, 40000, 10, 4, 5, 3, 1, 2];
+<?php
+$arr = [300, 1000, 1, 54, 1, 23, 1, 1000, 3000, 40000, 10, 4, 5, 3, 1, 4];
 
 $maxIndex = count($arr) - 1;
 reset($arr);
 $minIndex = key($arr);
 iSort($arr, $minIndex, $maxIndex);
 
-function iSort($arr, $minIndex, $maxIndex)
+function iSort(&$arr, $minIndex, $maxIndex)
 {
     $middleIndex = floor($maxIndex - ($maxIndex - $minIndex) / 2);
     if ($minIndex < $middleIndex) {
@@ -17,7 +17,7 @@ function iSort($arr, $minIndex, $maxIndex)
     merge($arr, $minIndex, $middleIndex, $maxIndex);
 }
 
-function merge($arr, $minIndex, $middleIndex, $maxIndex)
+function merge(&$arr, $minIndex, $middleIndex, $maxIndex)
 {
     $newArr = [];
     $j = $minIndex;
